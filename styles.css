@@ -100,6 +100,62 @@
   transition: max-height 0.2s ease-out;
   
 }
-input, label {
-  display:block;
+
+/* css for Spellslot Tracker tab*/
+.container {
+  margin: 10px;
+  background-color: transparent;
+}
+
+.monster-box {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 400px;
+  max-width: 400px;
+  background-image: url("assets/Background.jpg");
+    background-position: center center; 
+    border-width: 5px;
+    border-image: url("assets/border.png");
+    border-image-slice: 20
+  
+}
+
+.checkbox-container {
+  margin-top: 10px;
+}
+
+.checkbox-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px;
+  
+}
+
+.spell-slot {
+  width: 30px;
+  height: 30px;
+  
+  display: inline-block;
+  margin: 5px;
+  
+}
+.spell-slot-level {
+  align-items: center;
+}
+.spell-slots {
+  text-align: center;
+  min-height: 43.5px;
+}
+.hidden {
+  display: none;
+}
+.monster_input_spell_amount {
+  width: 35px;
 }
