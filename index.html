@@ -9,13 +9,13 @@
     <button class="tablink" onclick="openPage('Item_Prices', this,'grey')"id="defaultOpen">Item Prices</button>
     <button class="tablink" onclick="openPage('Spellslot_Tracker', this,'grey')" >Spellslot Tracker</button>
     <button class="tablink" onclick="openPage('Page_3', this,'grey')">Page 3</button>
-    <button class="tablink" onclick="openPage('Page_4', this,'grey')">Page</button>
+    <button class="tablink" onclick="openPage('Page_4', this,'grey')">Page 4</button>
 
     <!-- Tab Section for Item Price table -->
     <section id="Item_Prices" class="tabcontent"> 
     <div>
       <h3>Something something</h3>
-     <h2>Magic Item Prices</h2>
+     <h2 class="HeaderCenter">Magic Item Prices</h2>
 
 
 
@@ -24,7 +24,7 @@
     <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search by name" title="Search"><br>
   <div class="selector_box">
     <label for="item_rarity_filter">Rarity:</label>
-  <select id="item_rarity_filter" onchange="filterTable()" name="item_rarity_filter">
+  <select id="item_rarity_filter" onchange="filterTable()" name="item_rarity_filter" style="margin-right: 10px;">
     <option value="all">All</option>
     <option value="common">Common</option>
     <option value="uncommon">Uncommon</option>
@@ -58,29 +58,13 @@
   <tbody id="tableBody"></tbody>
 </table>
 
-    </div>
-    
-    <div id="News" class="tabcontent">
-      <h3>News</h3>
-      <p>Some news this fine day!</p> 
-    </div>
-    
-    <div id="Contact" class="tabcontent">
-      <h3>Contact</h3>
-      <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
-    
-    <div id="About" class="tabcontent">
-      <h3>About</h3>
-      <p>Who we are and what we do.</p>
-    </div>
-    
+    </div> 
     <script src="javascript.js"></script>
   </section>
   <!-- Tab Section for Spellslot Tracker -->
   <section id="Spellslot_Tracker" class="tabcontent">
     <div class="container">
-      <h1>Monster Spell Slots Tracker</h1>
+      <h1 class="HeaderCenter">Monster Spell Slots Tracker</h1>
       <label for="monsterCount">Enter the number of monsters:</label>
       <input type="number" id="monsterCount" min="1" step="1">
       <button onclick="createMonsters()">Create Monsters</button>
