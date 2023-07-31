@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button class="tablink" onclick="openPage('Shop', this,'grey')"id="defaultOpen">Shop</button>
+    <button class="tablink" onclick="openPage('News', this,'grey')" >News</button>
+    <button class="tablink" onclick="openPage('Contact', this,'grey')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this,'grey')">About</button>
+    
+    <div id="Shop" class="tabcontent">
+      <h3>Something something</h3>
+     <h2>Magic Item Prices</h2>
+
+
+
+
+  <div>
+    <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search by name" title="Search"><br>
+  <div class="selector_box">
+    <label for="item_rarity_filter">Rarity:</label>
+  <select id="item_rarity_filter" onchange="filterTable()" name="item_rarity_filter">
+    <option value="all">All</option>
+    <option value="common">Common</option>
+    <option value="uncommon">Uncommon</option>
+    <option value="rare">Rare</option>
+    <option value="very rare">Very rare</option>
+    <option value="legendary">Legendary</option>
+    <option value="artifact">Artifact</option>
+  </select>
+</div>
+
+<div class="selector_box">
+  <label for="item_attunement_filter">Attunement:</label>
+    <select id="item_attunement_filter" onchange="filterTable()">
+      <option value="all">All</option>
+      <option value="yes">Attunable</option>
+      <option value="no">Not Attunable</option>
+    </select>
+  </div>
+  
+
+<!--Populate items with prices with javascript from json file-->
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price/Gold</th>
+      <th>Rarity</th>
+      <th>Attunement</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+    </div>
+    
+    <div id="News" class="tabcontent">
+      <h3>News</h3>
+      <p>Some news this fine day!</p> 
+    </div>
+    
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+    
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+    
+    <script src="koodi.js"></script>
+<script>
+
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
+</script>
+
+</body>
+</html>
